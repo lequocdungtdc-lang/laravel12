@@ -51,7 +51,7 @@
                             <!-- Login link -->
                             <div class="text-center mt-3">
                                 <small>Đã có tài khoản?
-                                    <a href="{{ route('login') }}">Đăng nhập</a>
+                                    <a href="{{ route('member.login') }}">Đăng nhập</a>
                                 </small>
                             </div>
 

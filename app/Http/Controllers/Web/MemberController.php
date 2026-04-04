@@ -60,6 +60,32 @@ class MemberController extends AllController
     {
         return view('web.member.login');
     }
+
+   public function login(Request $request)
+    {
+        // validate + message
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ], [
+            'email.required' => 'Email không được để trống',
+            'email.email' => 'Email không hợp lệ',
+            'password.required' => 'Mật khẩu không được để trống',
+        ]);
+
+        // login
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::guard('member')->attempt($credentials)) {
+            return redirect('/');
+        }
+
+        // ❌ sai tài khoản hoặc mật khẩu
+        return back()
+            ->withErrors(['login' => 'Email hoặc mật khẩu không đúng'])
+            ->withInput();
+    }
+    
     //logout
     public function logout()
     {
