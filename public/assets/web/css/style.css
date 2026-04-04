@@ -1,0 +1,11 @@
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+/* Font */
+body{font-family:Arial,sans-serif;}
+.wrap-content{max-width:1232px;margin:auto;padding-left: 16px;padding-right: 16px;}
+.mw-500{max-width:500px;margin:auto;}
+/* Variables */
+:root{--main1:#007bff;--main2:#007bff;--main3:#007bff;--primary:#007bff;--dark:#333;}
+/* Header */
+@media (max-width: 768px) {
+}
