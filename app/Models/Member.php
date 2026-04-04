@@ -22,6 +22,7 @@ class Member extends Authenticatable
         'remember_token',
     ];
 
+
     protected function casts(): array
     {
         return [

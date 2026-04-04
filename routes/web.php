@@ -12,6 +12,13 @@ Route::get('/member/login', [MemberController::class, 'showLogin'])->name('membe
 Route::post('/member/login', [MemberController::class, 'login'])->name('member.login.post');
 Route::get('/member/logout', [MemberController::class, 'logout'])->name('member.logout');
 
+Route::prefix('member')
+    ->middleware('auth:member')
+    ->name('member.')
+    ->group(function () {
+        Route::get('/profile', [MemberController::class, 'profile'])->name('profile');
+        Route::post('/profile', [MemberController::class, 'updateProfile'])->name('profile.update');
+    });
 
 
 // Route::get('/', function () {

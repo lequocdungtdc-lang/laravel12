@@ -1,0 +1,17 @@
+<?php
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class CheckMemberLogin
+{
+    public function handle(Request $request, Closure $next)
+    {
+        if (!Auth::guard('member')->check()) {
+            return redirect()->route('member.login');
+        }
+
+        return $next($request);
+    }
+}
