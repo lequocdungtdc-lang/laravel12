@@ -15,6 +15,12 @@ Route::prefix('admin')->group(function () {
             return view('admin.dashboard');
         });
         Route::get('/users', [UserController::class, 'index']);
+        //adduser
+        Route::post('/users', [UserController::class, 'store'])->name('adduser');
+        //edituser
+        Route::post('/users/edit', [UserController::class, 'edit'])->name('edituser');
+        //deleteuser
+        Route::get('/users/delete/{id}', [UserController::class, 'destroy'])->name('deleteuser');
     });
 
 });

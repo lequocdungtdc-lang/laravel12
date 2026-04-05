@@ -5,6 +5,7 @@ use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\MemberController;
 
 
+
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/member/register', [MemberController::class, 'register'])->name('member.register');
 Route::post('/member/register', [MemberController::class, 'store'])->name('member.register.post');
@@ -13,7 +14,7 @@ Route::post('/member/login', [MemberController::class, 'login'])->name('member.l
 Route::get('/member/logout', [MemberController::class, 'logout'])->name('member.logout');
 
 Route::prefix('member')
-    ->middleware('auth:member')
+    ->middleware('member')
     ->name('member.')
     ->group(function () {
         Route::get('/profile', [MemberController::class, 'profile'])->name('profile');

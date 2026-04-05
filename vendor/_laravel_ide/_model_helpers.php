@@ -11,16 +11,22 @@ namespace App\Models {
      * @property string|null $password
      * @property \Illuminate\Support\Carbon|null $email_verified_at
      * @property string|null $id_group
+     * @property int|null $numb
+     * @property string|null $status
      * @property string|null $address
      * @property string|null $email
      * @property string|null $phone
+     * @property string|null $avatar
      * @property string|null $fullname
      * @property int $id
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereFullname($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereAvatar($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member wherePhone($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereEmail($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereAddress($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereNumb($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereIdGroup($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member whereEmailVerifiedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Member>|Member wherePassword($value)
@@ -351,14 +357,24 @@ namespace App\Models {
      * @property string $password
      * @property \Illuminate\Support\Carbon|null $email_verified_at
      * @property string $role
+     * @property string|null $status
+     * @property string|null $avatar
+     * @property string|null $phone
+     * @property string|null $address
      * @property string $email
-     * @property string $name
+     * @property int|null $numb
+     * @property string $fullname
      * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
      * @property-read int|null $notifications_count
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereName($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereFullname($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereNumb($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmail($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereAddress($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePhone($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereAvatar($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereStatus($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRole($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmailVerifiedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePassword($value)
